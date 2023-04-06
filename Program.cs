@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaStore.Store;
+using System;
 
 namespace PizzaStore
 { 
@@ -6,9 +7,8 @@ namespace PizzaStore
     {
         static void Main(string[] args)
         {
-            var pizzaStore = new PizzaStore();
-
-            pizzaStore.OrderPizza("greek");
+            var pizzaStore = new HNPizzaStore();
+            pizzaStore.OrderPizza("cheese");
         }
     }
 }

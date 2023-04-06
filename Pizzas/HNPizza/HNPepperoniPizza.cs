@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PizzaStore
 {
-    public class PepperoniPizza : Pizza
+    public class HNPepperoniPizza : Pizza
     {
-        public PepperoniPizza()
+        public HNPepperoniPizza()
         {
             name = "Pepperoni Pizza";
             dough = "Thick dough";
