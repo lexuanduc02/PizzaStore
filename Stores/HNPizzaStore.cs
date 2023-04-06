@@ -8,17 +8,33 @@ namespace PizzaStore.Store
 {
     public class HNPizzaStore : PizzaStore
     {
+        public override void OrderPizza()
+        {
+            Console.WriteLine("Please choose a type pizza...");
+            Console.WriteLine("\t1: Cheese Pizza");
+            Console.WriteLine("\t2: Greek Pizza");
+            Console.WriteLine("\t3: Pepperoni Pizza");
+
+            string type = Console.ReadLine();
+
+            Pizza pizza = CreatePizza(type);
+            pizza.Prepare();
+            pizza.Bake();
+            pizza.Cut();
+            pizza.Box();
+        }
+
         protected override Pizza CreatePizza(string type)
         {
             Console.WriteLine("\t Ha Noi Store");
             Console.WriteLine("-----------------------------");
             switch (type)
             {
-                case "cheese":
+                case "1":
                     return new HNCheesePizza();
-                case "greek":
+                case "2":
                     return new HNGreekPizza();
-                case "pepperoni":
+                case "3":
                     return new HNPepperoniPizza();
                 default:
                     return null;
